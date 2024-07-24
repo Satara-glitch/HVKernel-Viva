@@ -111,7 +111,7 @@
 			compatible = "arm,cortex-a75";
 			reg = <0x0600>;
 			enable-method = "psci";
-			clock-frequency = <2050000000>;
+			clock-frequency = <2200000000>;
 			cpu-idle-states = <&cpuoff_b &clusteroff_b
 						&mcusysoff  &s2idle>;
 		};
@@ -121,7 +121,7 @@
 			compatible = "arm,cortex-a75";
 			reg = <0x0700>;
 			enable-method = "psci";
-			clock-frequency = <2050000000>;
+			clock-frequency = <2200000000>;
 			cpu-idle-states = <&cpuoff_b &clusteroff_b
 						&mcusysoff &s2idle>;
 		};
@@ -1293,7 +1293,7 @@
 			   774 28 4 1
 			   500 16 4 1 >;
 
-		B-table = <2050 99 1 1
+		B-table = <2200 99 1 1
 			   1986 95 1 1
 			   1923 90 1 1
 			   1860 86 1 1

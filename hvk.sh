@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DEFCONFIG="/viva_defconfig"
-CLANGDIR="/workspace/clang"
+CLANGDIR="/workspace/ubuntussh/clang-18"
 
 #
 rm -rf compile.log
@@ -17,8 +17,8 @@ mkdir out/HvKernel/viva_build
 export KBUILD_BUILD_USER=Hkadaaa
 export KBUILD_BUILD_HOST=Builder
 export PATH="$CLANGDIR/bin:$PATH"
-git clone --depth=1 https://github.com/sarthakroy2002/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7 los-4.9-64
-git clone --depth=1 https://github.com/sarthakroy2002/linaro_arm-linux-gnueabihf-7.5 los-4.9-32
+
+
 
 #
 make O=out ARCH=arm64 $DEFCONFIG
@@ -47,6 +47,7 @@ AR=llvm-ar \
 AS=llvm-as \
 NM=llvm-nm \
 OBJCOPY=llvm-objcopy \
+OBJDUMP=llvm-objdump \
 CONFIG_SECTION_MISMATCH_WARN_ONLY=y
 }
 

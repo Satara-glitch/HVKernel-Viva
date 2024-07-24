@@ -1,0 +1,167 @@
+make[1]: Entering directory '/workspace/ubuntussh/HVKernel-Viva/out'
+  GEN     ./Makefile
+scripts/kconfig/conf  --silentoldconfig Kconfig
+  CHK     include/config/kernel.release
+  GEN     ./Makefile
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  Using .. as source for kernel
+-- KernelSU version: 11872
+-- KernelSU Manager signature size: 0x033b
+-- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+-- Did you know you can backport path_umount to fs/namespace.c from 5.9?
+-- Read: https://kernelsu.org/guide/how-to-integrate-for-non-gki.html#how-to-backport-path-umount
+  CHK     scripts/mod/devicetable-offsets.h
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CHK     include/generated/asm-offsets.h
+  CALL    ../scripts/checksyscalls.sh
+..
+  CHK     include/generated/compile.h
+..
+FDVT: Drv use 5.1 folder
+..
+..
+..
+..
+MTK_GPU_VERSION 1 = mali
+************  drivers/trusty/mtee-kree mk ************
+imgsensor drv by platform s5khm2sd_main_sunny_mipi_raw/ s5khm2sd_main_ofilm_mipi_raw/ hi1634q_front_ofilm_mipi_raw/ hi1634q_front_qtech_mipi_raw/ ov8856_ultra_aac_mipi_raw/ imx355_ultra_sunny_mipi_raw/ ov02b1b_depth_sunny_mipi_raw/ ov02b1b_depth_truly_mipi_raw/ gc02m1_macro_ofilm_mipi_raw/ gc02m1_macro_aac_mipi_raw/
+imgsensor drv by platform 
+imgsensor subdir-ccflags-y = -I../drivers/misc/mediatek/imgsensor/src/common/v1_1 -I../drivers/misc/mediatek/mmdvfs -I../drivers/i2c/busses/ -I../drivers/misc/mediatek/imgsensor/src/viva/camera_hw_mt6781 -I../drivers/misc/mediatek/imgsensor/src/viva/camera_hw -I../drivers/misc/mediatek/imgsensor/src/common/v1_1/camera_hw -DSENSOR_PARALLEISM -DSENINF_N3D_SUPPORT -I../drivers/misc/mediatek/imgsensor/src/viva/seninf_mt6781/ -I../drivers/misc/mediatek/imgsensor/src/viva/seninf/
+*MTK_GPU_VERSION 2 = valhall
+*MTK_GPU_VERSION 3 = r25p0
+mali MTK evironment, building r25p0 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6781"
+mali MTK evironment, building r25p0 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6781"
+mali MTK evironment, building r25p0 DDK
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY := y
+mtk-Kbuild CONFIG_MALI_PLATFORM_THIRDPARTY_NAME := "mt6781"
+"CONFIG_MICROTRUST_TEE_VERSION="300""
+TCORE_UT_TESTS_SUPPORT = n
+TCORE_PROFILING_SUPPORT = n
+TCORE_PROFILING_AUTO_DUMP = n
+TCORE_MEMORY_LEAK_DETECTION_SUPPORT = n
+"CONFIG_MICROTRUST_TEE_SUPPORT=y"
+"CONFIG_MICROTRUST_TZ_DRIVER=Y"
+"CONFIG_MICROTRUST_VFS_DRIVER=Y"
+"CONFIG_MICROTRUST_FP_DRIVER=Y"
+"CONFIG_MICROTRUST_DEBUG="
+"CONFIG_MICROTRUST_TEST_DRIVERS="
+  EXPORTS arch/arm64/lib/lib-ksyms.o
+  AR      arch/arm64/lib/built-in.o
+  AR      drivers/cdrom/built-in.o
+  CC      drivers/char/mem.o
+  AR      drivers/char/ipmi/built-in.o
+  CC      drivers/block/zram/zram_drv.o
+  CC      drivers/char/random.o
+  CC      drivers/clk/clk-devres.o
+  GZIP    kernel/config_data.gz
+  CHK     kernel/kheaders_data.tar.xz
+  CHK     kernel/config_data.h
+  CC      drivers/char/misc.o
+  CC      drivers/clocksource/timer-of.o
+  AR      drivers/crypto/built-in.o
+../drivers/block/zram/zram_drv.c:1047:47: error: a function declaration without a prototype is deprecated in all versions of C [-Werror,-Wstrict-prototypes]
+ 1047 | static struct zram_pages_life *init_pages_life()
+      |                                               ^
+      |                                                void
+1 error generated.
+make[4]: *** [../scripts/Makefile.build:357: drivers/block/zram/zram_drv.o] Error 1
+make[3]: *** [../scripts/Makefile.build:671: drivers/block/zram] Error 2
+make[2]: *** [../scripts/Makefile.build:671: drivers/block] Error 2
+make[2]: *** Waiting for unfinished jobs....
+  CC      drivers/clocksource/timer-probe.o
+  CC      drivers/cpuidle/cpuidle.o
+  CC      drivers/clocksource/mmio.o
+  CC      drivers/cpufreq/cpufreq.o
+  CC      drivers/cpuidle/driver.o
+  CC      drivers/clocksource/mtk_apxgpt.o
+  CC      drivers/clk/clk-bulk.o
+  EXPORTS lib/lib-ksyms.o
+  AR      lib/built-in.o
+  CC      drivers/clocksource/mtk_systimer.o
+  CC      drivers/cpuidle/governor.o
+  CC      drivers/clocksource/arm_arch_timer.o
+  CC      drivers/clocksource/dummy_timer.o
+  CC      drivers/clk/clkdev.o
+  CC      drivers/cpuidle/sysfs.o
+  CC      drivers/cpuidle/governors/mtk_menu.o
+  CC      drivers/cpuidle/dt_idle_states.o
+  CC      drivers/cpuidle/cpuidle-mediatek.o
+  CC      drivers/clk/clk.o
+  CC      drivers/clk/clk-divider.o
+  CC      drivers/clk/clk-fixed-factor.o
+../drivers/char/random.c:1853:1: warning: unused function 'random_read' [-Wunused-function]
+ 1853 | random_read(struct file *file, char __user *buf, size_t nbytes, loff_t *ppos)
+      | ^~~~~~~~~~~
+1 warning generated.
+  AR      drivers/char/agp/built-in.o
+  CC      drivers/char/hw_random/core.o
+  CC      drivers/char/hw_random/mt67xx-rng.o
+  CC      drivers/char/rpmb/rpmb-mtk.o
+  CC      drivers/char/rpmb/core.o
+  CC      drivers/clk/clk-fixed-rate.o
+  CC      drivers/clk/clk-gate.o
+  AR      drivers/cpuidle/governors/built-in.o
+  AR      drivers/cpuidle/built-in.o
+  AR      drivers/clocksource/built-in.o
+  CC      drivers/clk/clk-multiplier.o
+  CC      drivers/clk/clk-mux.o
+  CC      drivers/clk/clk-composite.o
+  CC      drivers/clk/clk-fractional-divider.o
+  CC      drivers/clk/clk-gpio.o
+  CC      drivers/clk/clk-conf.o
+  CC      drivers/cpufreq/freq_table.o
+  AR      drivers/char/hw_random/rng-core.o
+  AR      drivers/char/hw_random/built-in.o
+  AR      drivers/char/rpmb/rpmb.o
+  CC      drivers/clk/clk-xgene.o
+  AR      drivers/clk/bcm/built-in.o
+  AR      drivers/clk/imgtec/built-in.o
+  CC      drivers/cpufreq/cpufreq_stats.o
+  AR      drivers/clk/mvebu/built-in.o
+  CC      drivers/clk/mediatek/clk-fixup-div.o
+  AR      drivers/clk/renesas/built-in.o
+  AR      drivers/clk/ti/built-in.o
+  CC      drivers/cpufreq/cpufreq_times.o
+  CC      drivers/cpufreq/cpufreq_performance.o
+  CC      drivers/cpufreq/cpufreq_powersave.o
+  CC      drivers/cpufreq/cpufreq_userspace.o
+  CC      drivers/clk/mediatek/clk-mtk.o
+  CC      drivers/clk/mediatek/clk-pll.o
+  CC      drivers/clk/mediatek/clk-gate.o
+  CC      drivers/clk/mediatek/clk-apmixed.o
+  CC      drivers/cpufreq/cpufreq_ondemand.o
+  CC      drivers/cpufreq/cpufreq_governor.o
+  CC      drivers/cpufreq/cpufreq_governor_attr_set.o
+../drivers/clk/clk.c:48:27: warning: unused variable 'orphan_list' [-Wunused-variable]
+   48 | static struct hlist_head *orphan_list[] = {
+      |                           ^~~~~~~~~~~
+1 warning generated.
+  CC      drivers/clk/mediatek/clk-cpumux.o
+  CC      drivers/cpufreq/cpumaxfreq.o
+  CC      drivers/clk/mediatek/clk-mux.o
+  CC      drivers/clk/mediatek/clk-mt6781.o
+  CC      drivers/clk/mediatek/clkchk.o
+  CC      drivers/clk/mediatek/clk-mt6781-pg.o
+  CC      drivers/clk/mediatek/clk-mtk-v1.o
+  CC      drivers/clk/mediatek/clkdbg.o
+  CC      drivers/clk/mediatek/clkdbg-mt6781.o
+  CC      drivers/clk/mediatek/clkchk-mt6781.o
+  AR      drivers/char/rpmb/built-in.o
+  CC      drivers/clk/mediatek/clk-bringup.o
+  AR      drivers/char/built-in.o
+  AR      drivers/cpufreq/built-in.o
+../drivers/clk/mediatek/clk-bringup.c:60:1: warning: unused label 'fail' [-Wunused-label]
+   60 | fail:
+      | ^~~~~
+1 warning generated.
+  AR      drivers/clk/mediatek/built-in.o
+  AR      drivers/clk/built-in.o
+make[1]: *** [/workspace/ubuntussh/HVKernel-Viva/Makefile:1172: drivers] Error 2
+make[1]: Leaving directory '/workspace/ubuntussh/HVKernel-Viva/out'
+make: *** [Makefile:146: sub-make] Error 2
