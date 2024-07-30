@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DEFCONFIG="/viva_defconfig"
-CLANGDIR="/workspace/ubuntussh/clang-18"
+CLANGDIR="/workspace/ubuntussh/proton-clang"
 
 #
 rm -rf compile.log
@@ -36,7 +36,7 @@ nocol='\033[0m'
 
 hvk () {
 PATH="${PWD}/clang/bin:${PATH}:${PWD}/los-4.9-32/bin:${PATH}:${PWD}/los-4.9-64/bin:${PATH}" \
-make -j$(nproc --all) O=out LLVM=1 \
+make -j$(nproc --all) O=out \
 ARCH=arm64 \
 CC="ccache clang" \
 CLANG_TRIPLE=aarch64-linux-gnu- \
@@ -48,6 +48,7 @@ AS=llvm-as \
 NM=llvm-nm \
 OBJCOPY=llvm-objcopy \
 OBJDUMP=llvm-objdump \
+STRIP=llvm-strip \
 CONFIG_SECTION_MISMATCH_WARN_ONLY=y
 }
 
